@@ -1,0 +1,389 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2813
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 .SFNSMono-Light_YAXS144F07C_wght2580000;\f2\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;
+\f3\fnil\fcharset0 .SFNS-Regular_wdth_opsz110000_GRAD_wght1F40000;\f4\fnil\fcharset0 .SFNS-Regular_wdth_opsz110000_GRAD_wght2580000;\f5\fnil\fcharset0 .SFNSMono-Light_YAXS144F062_wght2580000;
+\f6\fnil\fcharset0 HelveticaNeue-Bold;\f7\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red24\green24\blue24;\red10\green39\blue64;\red255\green255\blue255;
+\red0\green0\blue0;\red218\green76\blue12;}
+{\*\expandedcolortbl;;\cssrgb\c12549\c12549\c12549;\cssrgb\c2745\c20784\c31765;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c0;\cssrgb\c89020\c38431\c3529;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use one of our client libraries to get started quickly.\
+\pard\pardeftab720\qc\partightenfactor0
+\cf2 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs21 \cf2 \ul \ulc2 Node.js\ulnone \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs21 \cf2 \ul \ulc2 Python\ulnone \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs32 \cf3 \strokec3 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs21 \cf2 \ul \ulc2 \strokec2 HTTP\ulnone \
+\pard\pardeftab720\sa400\partightenfactor0
+
+\fs32 \cf2 Set the\'a0
+\f1\b\fs28 REPLICATE_API_TOKEN
+\f0\b0\fs32 \'a0environment variable\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 export REPLICATE_API_TOKEN=r8_3ce**********************************\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf4 \cb5 Visibility\cb1 \
+\
+\cb5 Copy\cb1 \
+\pard\pardeftab720\sa400\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://replicate.com/yorickvp/llava-v1.6-mistral-7b/api/learn-more#authentication"}}{\fldrslt 
+\f3\fs32 \cf0 \ul \ulc0 \strokec5 Learn more about authentication\ulnone \
+}}\pard\pardeftab720\sa400\partightenfactor0
+
+\fs32 \cf2 \strokec2 Install Replicate\'92s Node.js client library\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 npm install replicate\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf4 \cb5 Copy\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://replicate.com/yorickvp/llava-v1.6-mistral-7b/api/learn-more#setup"}}{\fldrslt 
+\f3\fs32 \cf0 \ul \ulc0 \strokec5 Learn more about setup}}
+\fs32 \cf2 \strokec2 \
+\pard\pardeftab720\sa400\partightenfactor0
+\cf2 Run\'a0
+\f4\b yorickvp/llava-v1.6-mistral-7b
+\f0\b0 \'a0using Replicate\'92s API. Check out the model's\'a0{\field{\*\fldinst{HYPERLINK "https://replicate.com/yorickvp/llava-v1.6-mistral-7b/api/schema"}}{\fldrslt 
+\f3 \ul schema}}\'a0for an overview of inputs and outputs.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 import Replicate from "replicate";\
+const replicate = new Replicate();\
+\
+const input = \{\
+    image: "https://replicate.delivery/pbxt/KKNB7w6pjN79j5pHDSyYXa5EwaQE9FL5fx6Qa83XMn1HYuKm/extreme_ironing.jpg",\
+    prompt: "What is unusual about this image?"\
+\};\
+\
+for await (const event of replicate.stream("yorickvp/llava-v1.6-mistral-7b:19be067b589d0c46689ffa7cc3ff321447a441986a7694c01225973c2eafc874", \{ input \})) \{\
+  process.stdout.write(`$\{event\}`)\
+  //=> "The "\
+\};\
+process.stdout.write("\\n")\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 const Replicate = \cf6 \strokec6 require\cf2 \strokec2 ("replicate")\
+const replicate = new Replicate()\
+\
+const input = \{\
+    image: "https://replicate.delivery/pbxt/KKNB7w6pjN79j5pHDSyYXa5EwaQE9FL5fx6Qa83XMn1HYuKm/extreme_ironing.jpg",\
+    prompt: "What is unusual about this image?"\
+\};\
+\
+for await (const event of replicate.stream("yorickvp/llava-v1.6-mistral-7b:19be067b589d0c46689ffa7cc3ff321447a441986a7694c01225973c2eafc874", \{ input \})) \{\
+  // event: \{ event: string; data: string; id: string \}\
+  process.stdout.write(`$\{event\}`)\
+  //=> "The "\
+\};\
+process.stdout.write("\\n");\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\cb5 Copy\cb1 \
+\pard\pardeftab720\sa400\partightenfactor0
+
+\fs32 \cf2 \strokec2 The\'a0
+\f5\b\fs28 \cf2 \strokec2 replicate.stream()
+\f0\b0\fs32 \cf2 \strokec2 \'a0method returns a\'a0{\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams"}}{\fldrslt 
+\f5\b\fs28 \cf2 \ul \ulc2 \strokec2 ReadableStream}}\'a0which can be iterated to transform the events into any data structure needed.\
+For example, to stream just the output content back:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 function handler(request) \{\
+  const stream = new ReadableStream(\{\
+    async start(controller) \{\
+      for await (const event of replicate.stream( "yorickvp/llava-v1.6-mistral-7b:19be067b589d0c46689ffa7cc3ff321447a441986a7694c01225973c2eafc874", \{ input \})) \{\
+        controller.enqueue(new TextEncoder().encode(`$\{event\}`));\
+        //=> "The "\
+      \}\
+      controller.close();\
+    \},\
+  \});\
+  return new Response(stream);\
+\}\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\cb5 Copy\cb1 \
+\pard\pardeftab720\sa400\partightenfactor0
+
+\fs32 \cf2 \strokec2 Or, stream a list of JSON objects back to the client instead of server sent events:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 function handler(request) \{\
+  const iterator = replicate.stream( "yorickvp/llava-v1.6-mistral-7b:19be067b589d0c46689ffa7cc3ff321447a441986a7694c01225973c2eafc874", \{ input \});\
+  const stream = new ReadableStream(\{\
+    async pull(controller) \{\
+      const \{ value, done \} = await iterator.next();\
+      const encoder = new TextEncoder();\
+\
+      if (done) \{\
+        controller.close();\
+      \} else if (value.event === "output" && value.data.length > 0) \{\
+        controller.enqueue(encoder.encode(JSON.stringify(\{ data: value.data \}) + "\\n"));\
+      \} else \{\
+        controller.enqueue(encoder.encode(""));\
+      \}\
+    \},\
+  \});\
+  return new Response(stream);\
+\}\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\cb5 Copy\cb1 \
+\pard\pardeftab720\sa360\partightenfactor0
+
+\f6\b\fs36 \cf0 \strokec5 Streaming in the browser\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\b0\fs32 \cf2 \strokec2 The JavaScript library is intended to be run on the server. Once the prediction has been created it's output can be streamed directly from the browser.\
+The streaming URL uses a standard format called\'a0{\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events"}}{\fldrslt 
+\f3 \cf2 \ul \ulc2 \strokec2 Server Sent Events}}\'a0(or\'a0
+\f5\b\fs28 \cf2 \strokec2 text/event-stream
+\f0\b0\fs32 \cf2 \strokec2 ) built into all web browsers.\
+A common implementation is to use a web server to create the prediction using\'a0
+\f5\b\fs28 \cf2 \strokec2 replicate.predictions.create
+\f0\b0\fs32 \cf2 \strokec2 , passing the\'a0
+\f5\b\fs28 \cf2 \strokec2 stream
+\f0\b0\fs32 \cf2 \strokec2 \'a0property set to\'a0
+\f5\b\fs28 \cf2 \strokec2 true
+\f0\b0\fs32 \cf2 \strokec2 . Then the\'a0
+\f5\b\fs28 \cf2 \strokec2 urls.stream
+\f0\b0\fs32 \cf2 \strokec2 \'a0property of the response contains a URL that can be returned to your frontend application:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 // POST /run_prediction\
+handler(req, res) \{\
+  const input = \{\
+    image: "https://replicate.delivery/pbxt/KKNB7w6pjN79j5pHDSyYXa5EwaQE9FL5fx6Qa83XMn1HYuKm/extreme_ironing.jpg",\
+    prompt: "What is unusual about this image?"\
+\};\
+  const prediction = await replicate.predictions.create(\{\
+    version: "19be067b589d0c46689ffa7cc3ff321447a441986a7694c01225973c2eafc874",\
+    input,\
+    stream: true,\
+  \});\
+  return Response.json(\{ url: prediction.urls.stream \});\
+  // Returns \{"url": "https://replicate-stream..."\}\
+\}\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\cb5 Copy\cb1 \
+\pard\pardeftab720\sa400\partightenfactor0
+
+\fs32 \cf2 \strokec2 Make a request to the server to create the prediction and use the built-in\'a0
+\f5\b\fs28 \cf2 \strokec2 EventSource
+\f0\b0\fs32 \cf2 \strokec2 \'a0object to read the returned\'a0
+\f5\b\fs28 \cf2 \strokec2 url
+\f0\b0\fs32 \cf2 \strokec2 .\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 const response = await fetch("/run_prediction", \{ method: "POST" \});\
+const \{ url \} = await response.json();\
+\
+const source = new EventSource(url);\
+source.addEventListener("output", (evt) => \{\
+  console.log(evt.data) //=> "The "\
+\});\
+source.addEventListener("done", (evt) => \{\
+  console.log("stream is complete");\
+\});\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\cb5 Copy\cb1 \
+\pard\pardeftab720\sa360\partightenfactor0
+
+\f6\b\fs36 \cf0 \strokec5 Prediction lifecycle\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\b0\fs32 \cf2 \strokec2 Running predictions and trainings can often take significant time to complete, beyond what is reasonable for an HTTP request/response.\
+When you run a model on Replicate, the prediction is created with a\'a0
+\f5\b\fs28 \cf2 \strokec2 \'93starting\'94
+\f0\b0\fs32 \cf2 \strokec2 \'a0state, then instantly returned. This will then move to\'a0
+\f5\b\fs28 \cf2 \strokec2 "processing"
+\f0\b0\fs32 \cf2 \strokec2 \'a0and eventual one of\'a0
+\f5\b\fs28 \cf2 \strokec2 \'93successful\'94
+\f0\b0\fs32 \cf2 \strokec2 ,\'a0
+\f5\b\fs28 \cf2 \strokec2 "failed"
+\f0\b0\fs32 \cf2 \strokec2 \'a0or\'a0
+\f5\b\fs28 \cf2 \strokec2 "canceled"
+\f0\b0\fs32 \cf2 \strokec2 .\
+\pard\pardeftab720\partightenfactor0
+
+\fs18 \cf2 \strokec2 Starting\
+
+\fs32 \cf2 \strokec2 \
+
+\fs18 \cf2 \strokec2 Running\
+
+\fs32 \cf2 \strokec2 \
+\
+
+\fs18 \cf2 \strokec2 Succeeded\
+
+\fs32 \cf2 \strokec2 \
+
+\fs18 \cf2 \strokec2 Failed\
+
+\fs32 \cf2 \strokec2 \
+
+\fs18 \cf2 \strokec2 Canceled\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\fs32 \cf2 \strokec2 You can explore the prediction lifecycle by using the\'a0
+\f5\b\fs28 \cf2 \strokec2 predictions.get()
+\f0\b0\fs32 \cf2 \strokec2 \'a0method to retrieve the latest version of the prediction until completed.\
+\pard\pardeftab720\partightenfactor0
+
+\f7 \cf2 \strokec2 Show example
+\f4\b \
+
+\f7\b0\fs21 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs27 \cf4 \strokec4 \
+\
+\pard\pardeftab720\sa360\partightenfactor0
+
+\f6\b\fs36 \cf0 \strokec5 Webhooks\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\b0\fs32 \cf2 \strokec2 Webhooks provide real-time updates about your prediction. Specify an endpoint when you\'a0{\field{\*\fldinst{HYPERLINK "https://replicate.com/docs/reference/http#predictions.create"}}{\fldrslt 
+\f3 \cf2 \ul \ulc2 \strokec2 create a prediction}}, and Replicate will send HTTP POST requests to that URL when the prediction is created, updated, and finished.\
+It is possible to provide a URL to the\'a0
+\f5\b\fs28 \cf2 \strokec2 predictions.create()
+\f0\b0\fs32 \cf2 \strokec2 \'a0function that will be requested by Replicate when the prediction status changes. This is an alternative to polling.\
+To receive webhooks you\'92ll need a web server. The following example uses\'a0{\field{\*\fldinst{HYPERLINK "https://hono.dev/"}}{\fldrslt 
+\f3 \cf2 \ul \ulc2 \strokec2 Hono}}, a web standards based server, but this pattern applies to most frameworks.\
+\pard\pardeftab720\partightenfactor0
+
+\f7 \cf2 \strokec2 Show example
+\f4\b \
+
+\f7\b0\fs21 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs27 \cf4 \strokec4 \
+\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\fs32 \cf2 \strokec2 Then create the prediction passing in the webhook URL and specify which events you want to receive out of\'a0
+\f5\b\fs28 \cf2 \strokec2 "start"
+\f0\b0\fs32 \cf2 \strokec2 ,\'a0
+\f5\b\fs28 \cf2 \strokec2 "output"
+\f0\b0\fs32 \cf2 \strokec2 ,\'a0
+\f5\b\fs28 \cf2 \strokec2 \'94logs\'94
+\f0\b0\fs32 \cf2 \strokec2 \'a0and\'a0
+\f5\b\fs28 \cf2 \strokec2 "completed"
+\f0\b0\fs32 \cf2 \strokec2 .\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 const input = \{\
+    image: "https://replicate.delivery/pbxt/KKNB7w6pjN79j5pHDSyYXa5EwaQE9FL5fx6Qa83XMn1HYuKm/extreme_ironing.jpg",\
+    prompt: "What is unusual about this image?"\
+\};\
+\
+const callbackURL = `https://my.app/webhooks/replicate`;\
+await replicate.predictions.create(\{\
+  version: "19be067b589d0c46689ffa7cc3ff321447a441986a7694c01225973c2eafc874",\
+  input: input,\
+  webhook: callbackURL,\
+  webhook_events_filter: ["completed"],\
+\});\
+\
+// The server will now handle the event and log:\
+// => \{"id": "xyz", "status": "successful", ... \}\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\cb5 Copy\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs21 \cf0 \strokec5 \uc0\u8505 \u65039  The\'a0
+\f5\b\fs18\fsmilli9188 replicate.run()
+\f0\b0\fs21 \'a0method is not used here. Because we're using webhooks, and we don\'92t need to poll for updates.\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\fs32 \cf2 \strokec2 Co-ordinating between a prediction request and a webhook response will require some glue. A simple implementation for a single JavaScript server could use an event emitter to manage this.\
+\pard\pardeftab720\partightenfactor0
+
+\f7 \cf2 \strokec2 Show example
+\f4\b \
+
+\f7\b0\fs21 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs27 \cf4 \strokec4 \
+\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\fs32 \cf2 \strokec2 From a security perspective it is also possible to verify that the webhook came from Replicate. Check out our documentation on\'a0{\field{\*\fldinst{HYPERLINK "https://replicate.com/docs/webhooks#verifying-webhooks"}}{\fldrslt 
+\f3 \cf2 \ul \ulc2 \strokec2 verifying webhooks}}\'a0for more information.\
+\pard\pardeftab720\sa360\partightenfactor0
+
+\f6\b\fs36 \cf0 \strokec5 Access a prediction\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\b0\fs32 \cf2 \strokec2 You may wish to access the prediction object. In these cases it\'92s easier to use the\'a0
+\f5\b\fs28 \cf2 \strokec2 replicate.predictions.create()
+\f0\b0\fs32 \cf2 \strokec2 \'a0or\'a0
+\f5\b\fs28 \cf2 \strokec2 replicate.deployments.predictions.create()
+\f0\b0\fs32 \cf2 \strokec2 \'a0functions which will return the prediction object.\
+Though note that these functions will only return the created prediction, and it will not wait for that prediction to be completed before returning. Use\'a0
+\f5\b\fs28 \cf2 \strokec2 replicate.predictions.get()
+\f0\b0\fs32 \cf2 \strokec2 \'a0to fetch the latest prediction.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 const input = \{\
+    image: "https://replicate.delivery/pbxt/KKNB7w6pjN79j5pHDSyYXa5EwaQE9FL5fx6Qa83XMn1HYuKm/extreme_ironing.jpg",\
+    prompt: "What is unusual about this image?"\
+\};\
+const prediction = replicate.predictions.create(\{\
+  version: "19be067b589d0c46689ffa7cc3ff321447a441986a7694c01225973c2eafc874",\
+  input\
+\});\
+// \{ "id": "xyz123", "status": "starting", ... \}\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs27 \cf4 \strokec4 \
+\cb5 Copy\cb1 \
+\pard\pardeftab720\sa360\partightenfactor0
+
+\f6\b\fs36 \cf0 \strokec5 Cancel a prediction\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\b0\fs32 \cf2 \strokec2 You may need to cancel a prediction. Perhaps the user has navigated away from the browser or canceled your application. To prevent unnecessary work and reduce runtime costs you can use the\'a0
+\f5\b\fs28 \cf2 \strokec2 replicate.predictions.cancel
+\f0\b0\fs32 \cf2 \strokec2 \'a0function and pass it a prediction id.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21 \cf2 await replicate.predictions.cancel(prediction.id);\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+}
